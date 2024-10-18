@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: black;
+  color: white;
+  position: relative;
+  z-index: 1000;
+  transition: all 0.5s ease-in-out;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 110px;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.logo {
+  margin: 2% 5%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+nav > ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav > ul > li {
+  position: relative;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+nav > ul > li > a:hover {
+  color: red;
+}
+
+nav ul li ul {
+  transition: all 0.5s ease-in-out;
+  display: none;
+  position: absolute;
+  background-color: black;
+  width: 200px;
+  top: 100%;
+  left: 0;
+  list-style-type: none;
+}
+
+nav > ul > li:hover > ul {
+  display: block;
+}
+
+nav ul li ul li a:hover {
+  color: gold;
+}
+
+.main-slider {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.main-slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.main-slider img.active {
+  opacity: 1;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.notice-section,
+.gallery-section,
+.featured-image {
+  width: 32%;
+  margin-right: 2%;
+}
+
+.notice-section h2,
+.gallery-section h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.notice-section ul {
+  list-style-type: none;
+}
+
+.notice-section ul li {
+  margin-bottom: 10px;
+}
+
+.notice-section ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.notice-section ul li a:hover {
+  color: red;
+}
+
+.gallery-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery-item {
+  width: 32%;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.featured-image {
+  margin: auto 5%;
+  bottom: 10%;
+}
+
+.featured-image img {
+  width: 100%;
+  height: auto;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  max-width: 600px;
+  position: relative;
+}
+
+.modal-content p {
+  display: none;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+}
+
+.close {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+.close:hover,
+.close:focus {
+  color: #f00;
+  background-color: #ddd;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #e6e6e6;
+  padding: 20px 0;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer .separator {
+  color: #999;
+  margin: 0 10px;
+}
+/* 기존의 footer 스타일은 유지 */
